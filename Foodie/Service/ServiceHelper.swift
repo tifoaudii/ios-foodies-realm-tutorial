@@ -15,7 +15,7 @@ class ServiceHelper {
     static let shared = ServiceHelper()
     
     //helper function
-    func getFoodies(completion: (_ foodies: [Food])-> Void) {}
+    func getFoodies(completion: (_ foodies: [Food], failure: (_ fail: Bool))-> Void) {}
     func addFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {}
     func updateFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {}
     func deleteFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {}
