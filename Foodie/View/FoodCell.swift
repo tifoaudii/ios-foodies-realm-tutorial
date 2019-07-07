@@ -21,6 +21,7 @@ class FoodCell: UITableViewCell {
     
     //Setup Cell's Content
     func setupCell(foodie: Food) {
-        
+        self.foodieName.text = foodie.name
+        self.foodieOwner.text = foodie.owner
     }
 }

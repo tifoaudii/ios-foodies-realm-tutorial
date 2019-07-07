@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gB-1q-IVW">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,25 +15,25 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FoodiesVC" customModule="Foodie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vis-Bb-rM1">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="food_cell" rowHeight="75" id="gfq-fR-Rqh" customClass="FoodCell" customModule="Foodie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="75"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gfq-fR-Rqh" id="LM7-oV-fiV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C69-F2-8nu">
-                                                    <rect key="frame" x="15" y="11" width="364" height="45"/>
+                                                    <rect key="frame" x="20" y="11" width="354" height="45"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nasi Padang Enak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-rZ-hmH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="22.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22.5" id="1YZ-M4-n7R"/>
                                                             </constraints>
@@ -38,7 +42,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rm. Padang Murah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlT-E7-LHG">
-                                                            <rect key="frame" x="0.0" y="30.5" width="364" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="30.5" width="354" height="14.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -65,24 +69,43 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your first foodie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-38-wZO">
+                                <rect key="frame" x="114.5" y="428" width="185" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JMt-tD-2mB"/>
+                                    <constraint firstAttribute="width" constant="185" id="XzL-W0-zDi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vis-Bb-rM1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oyh-bc-BZ0"/>
+                            <constraint firstItem="IB3-38-wZO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QVm-Sv-uus"/>
                             <constraint firstItem="Vis-Bb-rM1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SB8-MG-nba"/>
                             <constraint firstItem="Vis-Bb-rM1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="adg-bO-TAe"/>
+                            <constraint firstItem="IB3-38-wZO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d66-r5-Hx0"/>
                             <constraint firstItem="Vis-Bb-rM1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="k74-wO-7iJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="List Foodie" id="Wcy-jR-5tO"/>
+                    <navigationItem key="navigationItem" title="List Foodie" id="Wcy-jR-5tO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Bf4-H7-khk">
+                            <connections>
+                                <action selector="onAddButtonTapped:" destination="BYZ-38-t0r" id="v48-EB-ZGC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="foodTableView" destination="Vis-Bb-rM1" id="07W-Bj-cis"/>
+                        <outlet property="infoLabel" destination="IB3-38-wZO" id="GV3-oY-aH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="843" y="117"/>
+            <point key="canvasLocation" x="842.02898550724649" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cxa-Zc-dhU">
