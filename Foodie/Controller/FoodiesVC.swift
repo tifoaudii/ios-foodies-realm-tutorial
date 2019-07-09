@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FoodiesVC: UIViewController {
     
@@ -15,19 +16,13 @@ class FoodiesVC: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     
     //MARK: Properties Here
-    private var foodies = [Food]()
     
     //MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ServiceHelper.shared.getFoodies(completion: { (foodies) in
-            self.foodies = foodies
-            foodTableView.reloadData()
-        }) { (fail) in
-            self.foodTableView.isHidden = true
-            self.infoLabel.isHidden = false
-        }
+        self.foodTableView.delegate = self
+        self.foodTableView.dataSource = self
     }
     
     //MARK: Action Here
@@ -58,13 +53,11 @@ class FoodiesVC: UIViewController {
 extension FoodiesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodies.count
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "food_cell", for: indexPath) as? FoodCell else { return FoodCell() }
-        let foodie = foodies[indexPath.row]
-        cell.setupCell(foodie: foodie)
         return cell
     }
 }
