@@ -15,7 +15,24 @@ class ServiceHelper {
     static let shared = ServiceHelper()
     
     //helper function
-    func addFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {}
-    func updateFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {}
-    func deleteFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {}
+    func addFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {
+        let realm = try! Realm()
+        try! realm.write { realm.add(foodie) }
+        completion(true)
+    }
+    
+    func updateFoodie(foodie: Food, newName: String, newOwner: String, completion: (_ success: Bool)-> Void) {
+        let realm = try! Realm()
+        try! realm.write {
+            foodie.name = newName
+            foodie.owner = newOwner
+        }
+        completion(true)
+    }
+    
+    func deleteFoodie(foodie: Food, completion: (_ success: Bool)-> Void, failure: (_ fail: Bool)-> Void) {
+        let realm = try! Realm()
+        try! realm.write { realm.delete(foodie) }
+        completion(true)
+    }
 }
